@@ -18,7 +18,7 @@ public class Calculadora {
         int soma = somar(a,b);
         int subtracao = subtrair(a,b);
         int multiplicacao = multiplicar(a,b);
-        int divisao = dividir(a,b);
+        String divisao = dividir(a,b);
 
         System.out.println("Soma: " + soma);
         System.out.println("Subtração: " + subtracao);
@@ -41,7 +41,12 @@ public class Calculadora {
         return (a * b);
     }
 
-    public static int dividir(int a, int b) {
-        return (a / b);
+    public static String dividir(int a, int b) {
+        if (b == 0) {
+            return "Não existe divisão por 0.";
+        } else {
+            return Integer.toString(a / b);
+        }
+
     }
 }
